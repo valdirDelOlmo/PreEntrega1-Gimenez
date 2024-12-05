@@ -5,11 +5,61 @@
     <title> 
         Curso de Javascript
     </title>
+    <style>
+        .razas {
+            height: 198px;
+            width: 300px;
+        }
+        .spans {
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
     <h1>
         Generador de Personajes
     </h1>
+    <div>
+        <div>
+            <h2>Datos del Personaje</h2> 
+        </div>
+        <div>
+            <input type="text" placeholder="Ingrese el nombre del personaje" id="inputNombre">
+            <input type="text" placeholder="Ingrese la raza del personaje" id="inputRaza">
+            <input type="text" placeholder="Ingrese la clase del personaje" id="inputClase">
+            <input type="number" placeholder="Ingrese el nivel del personaje" id="inputNivel">
+            <input type="text" placeholder="Ingrese la profesion del personaje" id="inputProfesion">   
+            <button type="submit" id="submitData">Suscribirse</button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div id="title">
+                <h2>Seleccione una raza</h2>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="imgs/aragorn.webp" alt="fotoHumano" class="razas" id="humano">
+                <p id="parrafoHumanos"">Los Humanos son valientes pero su mayor debilidad es la codicia</p>
+            </div>
+            <div>
+                <img src="imgs/legolas.webp" alt="fotoElfo" class="razas" id="elfo">
+                <p id="parrafoElfos">Los Elfos son amantes de la naturaleza y buscan el equilibrio entre todas las formas de vida</p>
+            </div>
+            <div>
+            <img src="imgs/gimli.webp" alt="fotoEnano" class="razas" id="enano">
+            <p id="parrafoEnanos">Los Enanos son grandes ingenieros y tambien tienen aficion por las joyas y gemas, rara vez salen de sus cuevas</p>
+            </div>
+            <div>
+            <img src="imgs/sam.webp" alt="fotoHalfling" class="razas" id="halfling">
+            <p id="parrafoHalflings">Los Halflings disfrutan de los placeres de la vida, les gusta la tranquilidad e ignoran lo que sucede mas alla de sus tierras</p>
+            </div>
+            <div>
+                <span id="span" class="spans">No has seleccionado ninguna raza</span>
+            </div>
+    </div>
+    </div>
 
 
 

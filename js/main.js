@@ -39,15 +39,27 @@ console.log(personajeTres);
 
 //Creacion de Personaje
 const nuevoPersonaje = new Personaje (
-    this.nombre = prompt("Ingrese el nombre de su personaje"),
-    this.raza = prompt("Ingrese la raza que desea jugar"),
-    this.clase = prompt("Ingrese la clase que desea jugar"),
-    this.nivel = parseInt(prompt("Ingrese el nivel del personaje")),
-    this.profesion = prompt("Ingrese la profesion del personaje")
+    this.nombre = document.getElementById("inputnombre"),
+    this.raza = document.getElementById("inputRaza"),
+    this.clase = document.getElementById("inputClase"),
+    this.nivel = parseInt(document.getElementById("inputNivel")),
+    this.profesion = document.getElementById("inputProfesion")
 )
+const submit = document.getElementById("submitData");
+submit.addEventListener (
+    "click",
+    () => {
+        inputNombre = document.getElementById("inputNombre").value,
+        inputRaza = document.getElementById("inputRaza").value,
+        inputClase = document.getElementById("inputClase").value,
+        inputNivel = document.getElementById("inputNivel").value,
+        inputProfesion = document.getElementById("inputProfesion").value
+    }
+) 
+
 console.log(nuevoPersonaje);
 
-// //Escoger Raza
+// Escoger Raza
 const razasDisponibles = "Las razas disponibles son Humanos, Elfos, Enanos, Halflings"
 console.log(razasDisponibles);
 const opcionesRazas = "Indique el numero correspondiente a la raza deseada"
@@ -87,62 +99,62 @@ const sextoResultadoSumaDados = "la sexta tirada"
 definirPuntuacionDeHabilidad (sextoResultadoSumaDados);
 
 // // //Definir puntuaciones de habilidad
-const asignarPuntuacion = "Asigne un resultado de los obtenidos anteriormente a cada habilidad, hasta haber utilizado el producto de todas las tiradas";
-alert(asignarPuntuacion);
+// const asignarPuntuacion = "Asigne un resultado de los obtenidos anteriormente a cada habilidad, hasta haber utilizado el producto de todas las tiradas";
+// alert(asignarPuntuacion);
 
-//Puntuacion de Fuerza
-let puntuacionDeFuerza = "Fuerza";
-Fuerza = parseInt(prompt("Ingrese le puntuacion de Fuerza"));
-while (isNaN(Fuerza) || Fuerza <= 0 || Fuerza > 18) {
-    alert("La puntuacion ingresada no es valida");
-    Fuerza = parseInt(prompt("Ingrese correctamente la puntuacion de Fuerza"));
-}
-console.log("La puntuacion de Fuerza es : " + Fuerza);
+// // Puntuacion de Fuerza
+// let puntuacionDeFuerza = "Fuerza";
+// Fuerza = parseInt(prompt("Ingrese le puntuacion de Fuerza"));
+// while (isNaN(Fuerza) || Fuerza <= 0 || Fuerza > 18) {
+//     alert("La puntuacion ingresada no es valida");
+//     Fuerza = parseInt(prompt("Ingrese correctamente la puntuacion de Fuerza"));
+// }
+// console.log("La puntuacion de Fuerza es : " + Fuerza);
 
-// //Puntuacion de Constitucion
-let puntuacionDeConstitucion = "Constitucion";
-Constitucion = parseInt(prompt("Ingrese le puntuacion de Constitucion"));
-while (isNaN(Constitucion) || Constitucion <= 0 || Constitucion > 18) {
-    alert("La puntuacion ingresada no es valida");
-    Constitucion = parseInt(prompt("Ingrese correctamente la puntuacion de Constitucion"));
-}
-console.log("La puntuacion de Constitucion es : " + Constitucion);
+// // //Puntuacion de Constitucion
+// let puntuacionDeConstitucion = "Constitucion";
+// Constitucion = parseInt(prompt("Ingrese le puntuacion de Constitucion"));
+// while (isNaN(Constitucion) || Constitucion <= 0 || Constitucion > 18) {
+//     alert("La puntuacion ingresada no es valida");
+//     Constitucion = parseInt(prompt("Ingrese correctamente la puntuacion de Constitucion"));
+// }
+// console.log("La puntuacion de Constitucion es : " + Constitucion);
 
-// //Puntuacion de Destreza
-let puntuacionDeDestreza = "Destreza";
-Destreza = parseInt(prompt("Ingrese le puntuacion de Destreza"));
-while (isNaN(Destreza) || Destreza <= 0 || Destreza > 18) {
-    alert("La puntuacion ingresada no es valida");
-    Destreza = parseInt(prompt("Ingrese correctamente la puntuacion de Destreza"));
-}
-console.log("La puntuacion de Destreza es : " + Destreza);
+// // //Puntuacion de Destreza
+// let puntuacionDeDestreza = "Destreza";
+// Destreza = parseInt(prompt("Ingrese le puntuacion de Destreza"));
+// while (isNaN(Destreza) || Destreza <= 0 || Destreza > 18) {
+//     alert("La puntuacion ingresada no es valida");
+//     Destreza = parseInt(prompt("Ingrese correctamente la puntuacion de Destreza"));
+// }
+// console.log("La puntuacion de Destreza es : " + Destreza);
 
-// //Puntuacion de Sabuduria
-let puntuacionDeSabiduria = "Sabiduria";
-Sabiduria = parseInt(prompt("Ingrese le puntuacion de Destreza"));
-while (isNaN(Sabiduria) || Sabiduria <= 0 || Sabiduria > 18) {
-    alert("La puntuacion ingresada no es valida");
-    Sabiduria = parseInt(prompt("Ingrese correctamente la puntuacion de Sabiduria"));
-}
-console.log("La puntuacion de Sabiduria es : " + Sabiduria);
+// // // //Puntuacion de Sabuduria
+// let puntuacionDeSabiduria = "Sabiduria";
+// Sabiduria = parseInt(prompt("Ingrese le puntuacion de Destreza"));
+// while (isNaN(Sabiduria) || Sabiduria <= 0 || Sabiduria > 18) {
+//     alert("La puntuacion ingresada no es valida");
+//     Sabiduria = parseInt(prompt("Ingrese correctamente la puntuacion de Sabiduria"));
+// }
+// console.log("La puntuacion de Sabiduria es : " + Sabiduria);
 
-// //Puntuacion de Inteligencia
-let puntuacionDeInteligencia = "Inteligencia";
-Inteligencia = parseInt(prompt("Ingrese le puntuacion de Inteligencia"));
-while (isNaN(Inteligencia) || Inteligencia <= 0 || Inteligencia > 18) {
-    alert("La puntuacion ingresada no es valida");
-    Inteligencia = parseInt(prompt("Ingrese correctamente la puntuacion de Inteligencia"));
-}
-console.log("La puntuacion de Inteligencia es : " + Inteligencia);
+// // //Puntuacion de Inteligencia
+// let puntuacionDeInteligencia = "Inteligencia";
+// Inteligencia = parseInt(prompt("Ingrese le puntuacion de Inteligencia"));
+// while (isNaN(Inteligencia) || Inteligencia <= 0 || Inteligencia > 18) {
+//     alert("La puntuacion ingresada no es valida");
+//     Inteligencia = parseInt(prompt("Ingrese correctamente la puntuacion de Inteligencia"));
+// }
+// console.log("La puntuacion de Inteligencia es : " + Inteligencia);
 
-// //Puntuacion de Carisma
-let puntuacionDeCarisma = "Carisma";
-Carisma = parseInt(prompt("Ingrese le puntuacion de Carisma"));
-while (isNaN(Carisma) || Carisma <= 0 || Carisma > 18) {
-    alert("La puntuacion ingresada no es valida");
-    Carisma = parseInt(prompt("Ingrese correctamente la puntuacion de Carisma"));
-}
-console.log("La puntuacion de Carisma es : " + Carisma);
+// // //Puntuacion de Carisma
+// let puntuacionDeCarisma = "Carisma";
+// Carisma = parseInt(prompt("Ingrese le puntuacion de Carisma"));
+// while (isNaN(Carisma) || Carisma <= 0 || Carisma > 18) {
+//     alert("La puntuacion ingresada no es valida");
+//     Carisma = parseInt(prompt("Ingrese correctamente la puntuacion de Carisma"));
+// }
+// console.log("La puntuacion de Carisma es : " + Carisma);
 
 // /* REPITO LOS CICLOS A PARTIR DE LA LINEA 60 PORQUE NO IDENTIFICO LA MANERA DE 
 // ASIGNAR EL RESULTADO DE LAS TIRADAS QUE SE PRODUCEN A PARTIR DE LA LINEA 35 A LAS
@@ -215,6 +227,7 @@ const inventarioInicial = [
 
 console.log(inventarioInicial);
 
+// Reduce y Filter
 const totalCoste = inventarioInicial.reduce ((acc, el) => {
     return acc + el.coste / 3;
 }, 0);
@@ -239,3 +252,68 @@ const costeIgualA3 = inventarioInicial.filter( (el) => {
     return el.coste === 3;
 });
 console.log(costeIgualA3);
+
+//Evento click
+const humano = document.getElementById("humano");
+humano.addEventListener(
+    "click",
+    () => {
+        alert("Has seleccionado la raza de los humanos");
+    }
+)
+const elfo = document.getElementById("elfo");
+elfo.addEventListener(
+    "click",
+    () => {
+        alert("Has seleccionado la raza de los elfos");
+    }
+)
+const enano = document.getElementById("enano");
+enano.addEventListener(
+    "click",
+    () => {
+        alert("Has seleccionado la raza de los enanos");
+    }
+)
+const halfling = document.getElementById("halfling");
+halfling.addEventListener(
+    "click",
+    () => {
+        alert("Has seleccionado la raza de los halflings");
+    }
+)
+
+//Guardar Array de Objetos en localStorage
+const inventarioInicialJSON = JSON.stringify(inventarioInicial);
+console.log(inventarioInicialJSON);
+localStorage.setItem("inventarioInicial", inventarioInicialJSON);
+
+//Obtener nuevamente array de objetos (objetos literales)
+const inventarioInicialDosJSON = localStorage.getItem("inventarioInicial");
+const inventarioInicialDos = JSON.parse(inventarioInicialJSON);
+console.log(inventarioInicialDos);
+
+//DOM
+//Modificar textos con innerHtml
+const parrafoHumanos = document.getElementById("parrafoHumanos")
+console.log(parrafoHumanos.innerHTML);
+parrafoHumanos.innerHTML = "Los <strong> Humanos </strong> son valientes y muy ambiciosos";
+const parrafoElfos = document.getElementById("parrafoElfos")
+console.log(parrafoElfos.innerHTML);
+parrafoElfos.innerHTML = "Los <strong> Elfos </strong> aprecian la naturaleza por sobre todas las cosas";
+const parrafoEnanos = document.getElementById("parrafoEnanos")
+console.log(parrafoEnanos.innerHTML);
+parrafoEnanos.innerHTML = "Los <strong> Enanos </strong> son expertos en la ingenieria";
+const parrafoHalflings = document.getElementById("parrafoHalflings")
+console.log(parrafoHalflings.innerHTML);
+parrafoHalflings.innerHTML = "Los <strong> Halflings </strong> raramente salen se sus tierras";
+
+//Crear elementos con innerHtml/innertext
+const h3 = document.createElement("h3");
+h3.innertext = "Piensa bien antes de escribir los datos de tu personaje pues no podras modificarlos mas tarde!!!";
+console.log(h3);
+const div = document.getElementById("title");
+div.append(h3);
+// Elemento para generar un numero aleatorio para hacer pruebas
+// let random = Math.ceil(Math.random() * 6)
+// console.log(random);
